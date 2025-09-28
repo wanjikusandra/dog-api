@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <h1>hello world</h1>
+     <div id="dogImage">
+        <img src="" alt="">
+        <button id="nextImage"> next dog image</button>
+     </div>
+     
+
+    <script>
+        console.log('hello')
+
+        const dogImageDiv=document.getElementById('dogImage')
+
+        fetch('https://dog.ceo/api/breeds/image/random')
+        .then(response=>response.json())
+        .then(json=>{
+            console.log(json.message)
+
+        dogImageDiv.innerHTML=`<img src="${json.message}" alt="dog image"
+        height="300px" width="300px">`
+        })
+        .catch(err=>{
+            console.log(err)
+        })
+
+    </script>
+   
+</body>
+</html>

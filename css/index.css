@@ -1,0 +1,23 @@
+::after,::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+  }
+  .rpsButton {
+    background-color: black;
+    
+  /* }
+   .rpsButton scissors{
+    color:red ;
+    size: 0vmax;
+  }
+   .rpsButton paper{
+    color:blue ;
+    size: 0vmax;
+  } */
+   .Button{
+    size: 100px;
+   }
+   /* body{
+    background-color: brown;
+   } */
