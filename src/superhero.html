@@ -6,8 +6,27 @@
     <title>Document</title>
 </head>
 <body>
+    <div>
+        <h1>superhero</h1>
+        <!-- <div id="hero"></div> -->
+    </div>
     <script>
-        fetch
+        // const heroDiv = document.getElementById('hero');
+
+        const getsuperhero=()=>{
+            fetch('https://superheroapi.com/api.php/6d3f891ee62e2dc2cc9f3d38e09da612/245')
+        .then(response=>response.json())
+        .then(json=> 
+            console.log(json.image.url))
+            // heroDiv.innerHTML = `img src= "${json.image.url}" alt="${json.name}"
+        }
+            // .catch(err => console.error('Error fetching superhero:', err));
+        getsuperhero(20)
+
+        const img='https://www.superherodb.com/pictures2/portraits/10/100/10476.jpg'
+
+        document.queryselector('body').innerHtml += '<img src="${img}"/>'
+        
     </script>
 </body>
 </html>
